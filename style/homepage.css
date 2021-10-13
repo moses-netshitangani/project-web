@@ -6,17 +6,16 @@
     scroll-behavior: smooth;
 }
 
-h1 {
+h1, h3, p {
     color: white;
     font-family: "Alatsi",  sans-serif;
 }
 
 .container {
-    background: linear-gradient(rgba(110, 84, 84, 0.8),  rgba(0, 0, 0, 0.6)), url("../imgs/b.jpg");
+    background: linear-gradient(rgba(69, 177, 219, 0.8),  rgba(29, 17, 138, 0.6)), url("../imgs/b.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
-
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
@@ -30,8 +29,12 @@ section {
     scroll-snap-align: start;
 }
 
+section:nth-of-type(2) {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
 .home-section {
-    background: linear-gradient(rgba(110, 84, 84, 0.8),  rgba(0, 0, 0, 0.6)), url("../imgs/b.jpg");
+    /* background: linear-gradient(rgba(110, 84, 84, 0.8),  rgba(0, 0, 0, 0.6)), url("../imgs/b.jpg"); */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -56,10 +59,8 @@ section {
     background-position: center;
     background-size: cover;
 }
-/* cjdjfklajdlfjklalfdlajfklaklfdjlkjadf */
 .nav-items {
     display: none;
-
 }
 
 .main {
@@ -101,7 +102,7 @@ section {
     width: 8em;
     height: 2.5em;
     border-radius: 10px;
-    border: 3px solid #7c5e6b;
+    border: 3px solid white;
     color: white;
     display: flex;
     justify-content: center;
@@ -114,8 +115,7 @@ section {
 
 .home-button:hover {
     transform: scale(1.15);
-    background-color: #7c5e6b;
-    border-color: #33223f;
+    background-color: rgba(69, 177, 219, 0.8);
 }
 
 .authors {
@@ -232,21 +232,21 @@ section {
         z-index: 10;
         width: 12em;
         height: 3em;
-        border: 4px solid #33223f;
-        background-color: rgba(255, 255, 255, 0.11);
+        border: 3px solid white;
+        /* background-color: rgba(255, 255, 255, 0.11); */
     }
 
     .home-button:hover {
         transform: scale(1.15);
-        background-color: #7c5e6b;
-        color: white;
+        /* background-color: #7c5e6b; */
+        /* color: white; */
     }
 
     .home-image {
         display: initial;
         width: 35em;
         height: 25em;
-        background: url("../imgs/student2.png");
+        background: url("../imgs/student.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -277,7 +277,6 @@ section {
 
     .project-details {
         padding: 5vh 2em 0 2em;
-        background-color: rgba(128, 128, 128, 0.2);
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -288,10 +287,10 @@ section {
         font-size: 3em;
     }
 
-    .project-details .content-outer {
+    .content-outer {
         width: 80%;
         height: 70%;
-        background-color: white;
+        border: 4px solid white;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -299,14 +298,27 @@ section {
         border-radius: 20px;
     }
 
-    .project-details .content {
+    .content {
         height: 80%;
         width: 100%;
+        padding: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    .project-details .content h3{
+        font-size: 2em;
+        margin-bottom: 1em;
+    }
+
+    .content p {
+        line-height: 2em;
+        padding: 1em;
+    }
 
     .project-details .content-outer div:first-of-type {
-        border-right: 2px solid grey;
+        border-right: 2px solid white;
     }
 
     /*-------------End of Project Details -------------*/
@@ -317,7 +329,6 @@ section {
         padding: 10vh 2em 0 2em;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
@@ -325,8 +336,37 @@ section {
         font-size: 3em;
     }
     
-    
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Scrollbar Modification */
 ::-webkit-scrollbar {
@@ -335,15 +375,15 @@ section {
   
   /* Track */
   ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: white;
   }
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #7c5e6b
+    background: rgba(69, 177, 219, 0.8);
   }
   
   /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
-    background: pink;
+    background: rgba(29, 17, 138, 0.6);
   }

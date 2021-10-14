@@ -29,7 +29,14 @@ section {
     scroll-snap-align: start;
 }
 
-section:nth-of-type(2) {
+section:nth-of-type(n+2) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10vh 2em 0 2em;
+}
+
+section:nth-of-type(2n) {
     background-color: rgba(128, 128, 128, 0.2);
 }
 
@@ -115,7 +122,7 @@ section:nth-of-type(2) {
 
 .home-button:hover {
     transform: scale(1.15);
-    background-color: rgba(69, 177, 219, 0.8);
+    background-color: rgba(68, 140, 247, 0.89);
 }
 
 .authors {
@@ -162,6 +169,15 @@ section:nth-of-type(2) {
 @media only screen and (min-device-width: 64em) {
     
     /*-----------------------Navbar------------------*/
+    section h1 {
+        font-size: 3em;
+    }
+
+    section h3 {
+        font-size: 2em;
+        margin-bottom: 0.5em 0;
+    }
+
     .menu {
         display: none;
     }
@@ -276,15 +292,10 @@ section:nth-of-type(2) {
     /*------------------ Project Details -------------*/
 
     .project-details {
-        padding: 5vh 2em 0 2em;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-
-    .project-details h1 {
-        font-size: 3em;
     }
 
     .content-outer {
@@ -299,17 +310,13 @@ section:nth-of-type(2) {
     }
 
     .content {
-        height: 80%;
+        height: 90%;
         width: 100%;
         padding: 2em;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-    }
-
-    .project-details .content h3{
-        font-size: 2em;
-        margin-bottom: 1em;
     }
 
     .content p {
@@ -325,15 +332,26 @@ section:nth-of-type(2) {
 
 
     /*----------------------- SIIs -------------------*/
-    .SIIs {
+    /* .SIIs {
         padding: 10vh 2em 0 2em;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    } */
 
     .SIIs h1{
         font-size: 3em;
+    }
+
+    .SIIs .content:first-of-type {
+        width: 65%;
+        border-right: 2px solid white;
+    }
+
+    .SIIs .content {
+        height: 90%;
+        padding: 0 0.5em;
+    }
+
+    #interactions .content:first-of-type {
+        border-right: 2px solid white;
     }
     
 }
@@ -370,7 +388,7 @@ section:nth-of-type(2) {
 
 /* Scrollbar Modification */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
   }
   
   /* Track */
